@@ -3,6 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    restart: unless-stopped
+    restart: unless-stopped #if container stopped/crashed then restart  it automatically, But if you manually run:docker compose stop Docker won't keep restarting it.
     ports:
       - "8080:8080"
